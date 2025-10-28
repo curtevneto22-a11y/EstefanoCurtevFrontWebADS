@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylehseet" href="style.css">
+</head>
+<body>
+
+    <!-- Header-->>
+    <header>
+        <h1>Cadstro de Usuarios</h1>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Indice</a></li>
+                <li><a href="projeto.html">Projeto</a></li>
+                <li><a href="cadastro.html" class="active">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero hero-cadastro">
+        <div class="hero-content">
+            <h1>Cadastre-se para ficar por dentro do mundo retro gamer</h1>
+            <p>Junte-se a nos e venha fazer parte da nossa familia de retro gamers</p>
+        </div> 
+        
+    </section>
+    
+    <!-- Formulario de Cadastro-->
+    <main>
+        <section>
+            <h2> Formulário de Cadastro</h2>
+            <div class="Secess-Message" id="sucessMessage"> </div>
+            Cadastro realizado com sucesso!
+            
+            <form id="FormulariodeCadastro" onsubmit="handleSubmit(event)">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="number" id="telefone" name="telefone" placeholder="(11) 9999-9999" required>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade *</label>
+                        <input type="number" id="idade" name="idade" min="18" max="100" required>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    
+                    <legend>Envie informações sobre algo que não temos no site!</legend>
+                    
+                    <div class="form-group">
+                        <label for="plataformas">Selecione a plataforma que deseja</label>
+                        <select name="plataformas" id="plataformas">
+                            <option value="">Selecione</option>
+                            <option value="ps1">Playstation 1</option>
+                            <option value="ps2">Playstation 2</option>
+                            <option value="xboxOriginal">Xbox Original</option>
+                            <option value="superNintendo">Super Nintendo</option>    
+                            <option value="nintendo64">Nintendo 64</option>
+                            <option value="gameboy"> Game Boy</option>                           
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="informações">Selecione sobre o que deseja nos informar</label>
+                        <select name="informações" id="informações">
+                            <option value="">Selecione..</option>
+                            <option value="Consoles">Consoles</option>
+                            <option value="Acessorios">Acessorios</option>
+                            <option value="Jogos">Jogos</option>
+                        </select>             
+                    </div>
+
+                </fieldset>
+                        
+        </section>
+    </main>
+
+</body>
+</html>
